@@ -28,6 +28,27 @@ error[E0384]: re-assignment of immutable variable `x`
 
 ---
 
+### Mutable Bindings
+
+```rust
+fn main() {
+    let mut x = 5;
+    println!("The value of x is: {}", x);
+    x = 6;
+    println!("The value of x is: {}", x);
+}
+```
+
+```
+$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+     Running `target/debug/variables`
+The value of x is: 5
+The value of x is: 6
+```
+
+---
+
 # Data Types
 
 ---
