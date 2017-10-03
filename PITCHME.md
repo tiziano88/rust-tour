@@ -2,7 +2,7 @@
 
 ---
 
-# Variables and Mutability
+### Variables and Mutability
 
 Variables are _immutable_
 
