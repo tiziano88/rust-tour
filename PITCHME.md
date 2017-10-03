@@ -15,6 +15,17 @@ fn main() {
 }
 ```
 
+```
+error[E0384]: re-assignment of immutable variable `x`
+ --> src/main.rs:4:5
+  |
+2 |     let x = 5;
+  |         - first assignment to `x`
+3 |     println!("The value of x is: {}", x);
+4 |     x = 6;
+  |     ^^^^^ re-assignment of immutable variable
+```
+
 ---
 
 # Data Types
