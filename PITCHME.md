@@ -345,9 +345,15 @@ Expected output:
 {
   "Italy": "London",
   "France": "Paris",
-  "United Kingdom", "London"
+  "United Kingdom": "London"
 }
 ```
+
+Hints:
+
+- https://doc.rust-lang.org/std/collections/struct.HashMap.html
+- https://doc.rust-lang.org/std/iter/
+- https://doc.rust-lang.org/std/macro.println.html
 
 +++
 
