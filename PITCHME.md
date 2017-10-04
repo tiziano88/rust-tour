@@ -182,7 +182,11 @@ fn main() {
 
 @[2](Creation)
 @[4-5](Accessing elements)
-@[7-8](Invalid array element access `thread '<main>' panicked at 'index out of bounds: the len is 5 but the index is 10'`)
+@[7-8](Invalid array element access
+
+```
+thread '<main>' panicked at 'index out of bounds: the len is 5 but the index is 10'
+```)
 
 ---
 
