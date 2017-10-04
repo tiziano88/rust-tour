@@ -184,6 +184,8 @@ fn main() {
 @[4-5](Accessing elements)
 @[7-8](Invalid array element access `thread '<main>' panicked at 'index out of bounds: the len is 5 but the index is 10'`)
 
+---
+
 ```
 $ cargo run
    Compiling arrays v0.1.0 (file:///projects/arrays)
