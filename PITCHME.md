@@ -350,6 +350,7 @@ Create a map from countries to their capital and print it out in JSON format:
 - https://doc.rust-lang.org/std/collections/struct.HashMap.html
 - https://doc.rust-lang.org/std/iter/
 - https://doc.rust-lang.org/std/macro.println.html
+- https://doc.rust-lang.org/std/string/struct.String.html
 
 +++
 
