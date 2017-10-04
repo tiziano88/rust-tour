@@ -337,9 +337,7 @@ fn main() {
 
 ## Exercise
 
-Create a map from strings to string and print it out in JSON format.
-
-Expected output:
+Create a map from countries to their capital and print it out in JSON format:
 
 ```json
 {
@@ -348,8 +346,6 @@ Expected output:
   "United Kingdom": "London"
 }
 ```
-
-Hints:
 
 - https://doc.rust-lang.org/std/collections/struct.HashMap.html
 - https://doc.rust-lang.org/std/iter/
