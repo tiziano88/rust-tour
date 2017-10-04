@@ -263,8 +263,78 @@ help: consider removing this semicolon:
 
 ---
 
-# Comments
+## Comments
+
+```rust
+// I am a comment.
+let lucky_number = 7; // Me too.
+```
 
 ---
 
-# Control Flow
+## Control Flow
+
+### `if` expressions
+
+```rust
+fn main() {
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+
+    println!("The value of number is: {}", number);
+}
+```
+
+---
+
+### `loop`
+
+```rust
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+```
+
+---
+
+### `while`
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{}!", number);
+
+        number = number - 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+```
+
+---
+
+### `for`
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+```
+
+---
+
+## Exercise
+
+Convert temperature from Celsius to Fahrenheit.
