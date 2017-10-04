@@ -337,4 +337,35 @@ fn main() {
 
 ## Exercise
 
-Convert temperature from Celsius to Fahrenheit.
+Create a map from strings to string and print it out in JSON format.
+
+Expected output:
+
+```json
+{
+  "Italy": "London",
+  "France": "Paris",
+  "United Kingdom", "London"
+}
+```
+
++++
+
+### Solution
+
+```rust
+use std::collections::HashMap;
+
+fn main() {
+    let mut entries: HashMap<String, String> = HashMap::new();
+    entries.insert("foo".to_string(), "bar".to_string());
+    entries.insert("test".to_string(), "nnn".to_string());
+
+    println!("{{");
+    for (i, (k, v)) in entries.iter().enumerate() {
+        let trail = if i < entries.len() - 1 { "," } else { "" };
+        println!("  {}: {}{}", k, v, trail);
+    }
+    println!("}}");
+}
+```
