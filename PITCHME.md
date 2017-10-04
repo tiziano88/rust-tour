@@ -186,18 +186,80 @@ fn main() {
 
 ---
 
-```
-$ cargo run
-   Compiling arrays v0.1.0 (file:///projects/arrays)
-     Running `target/debug/arrays`
-thread '<main>' panicked at 'index out of bounds: the len is 5 but the index is
- 10', src/main.rs:6
-note: Run with `RUST_BACKTRACE=1` for a backtrace.
+### How Functions Work
+
+```rust
+fn main() {
+    another_function(5, 6);
+}
+
+fn another_function(x: i32, y: i32) {
+    println!("The value of x is: {}", x);
+    println!("The value of y is: {}", y);
+}
 ```
 
 ---
 
-# How Functions Work
+### Statements and Expressions
+
+- _Statements_
+  - Instructions that perform some action and do not return a value
+- _Expressions_
+  - Evaluate to a resulting value
+  - Do not include ending semicolon
+
+---
+
+### Return Values
+
+The return value of a function is the value of the final expression in the block
+of the body.
+
+```rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+---
+
+```rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1;
+}
+```
+
+```
+error[E0308]: mismatched types
+ --> src/main.rs:7:28
+  |
+7 |   fn plus_one(x: i32) -> i32 {
+  |  ____________________________^
+8 | |     x + 1;
+9 | | }
+  | |_^ expected i32, found ()
+  |
+  = note: expected type `i32`
+             found type `()`
+help: consider removing this semicolon:
+ --> src/main.rs:8:10
+  |
+8 |     x + 1;
+  |          ^
+```
 
 ---
 
