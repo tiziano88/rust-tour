@@ -360,13 +360,14 @@ use std::collections::HashMap;
 
 fn main() {
     let mut entries: HashMap<String, String> = HashMap::new();
-    entries.insert("foo".to_string(), "bar".to_string());
-    entries.insert("test".to_string(), "nnn".to_string());
+    entries.insert("Italy".to_string(), "London".to_string());
+    entries.insert("France".to_string(), "Paris".to_string());
+    entries.insert("United Kingdom".to_string(), "London".to_string());
 
     println!("{{");
     for (i, (k, v)) in entries.iter().enumerate() {
         let trail = if i < entries.len() - 1 { "," } else { "" };
-        println!("  {}: {}{}", k, v, trail);
+        println!(r#"  "{}": "{}"{}"#, k, v, trail);
     }
     println!("}}");
 }
