@@ -87,7 +87,7 @@ The value of x is: 12
 
 ---
 
-### Data Types
+## Data Types
 
 - Statically typed (all types known at compile time)
 - Compiler can _infer_ types
@@ -112,6 +112,115 @@ Length | Signed | Unsigned
 32-bit |`i32`   |`u32`
 64-bit |`i64`   |`u64`
 arch   |`isize` |`usize`
+
+---
+
+### Integer Literals
+
+Number Literals  | Example
+-----------------|--------------
+Decimal          | `98_222`
+Hex              | `0xff`
+Octal            | `0o77`
+Binary           | `0b1111_0000`
+Byte (`u8` only) | `b'A'`
+
+---
+
+### Floating-Point Types
+
+`f32` and `f64`
+
+### Boolean Type
+
+`bool`
+
+`true` and `false`
+
+### Character Type
+
+`char`
+
+---
+
+## Compound Types
+
+### Tuple
+
+```rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+
+---
+
+### Pattern Matching
+
+```rust
+fn main() {
+    let tup = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("The value of y is: {}", y);
+}
+```
+
+---
+
+### Accessors
+
+```rust
+fn main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let five_hundred = x.0;
+    let six_point_four = x.1;
+    let one = x.2;
+}
+```
+
+---
+
+## Arrays
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+}
+```
+
+---
+
+### Accessing Array Elements
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+    let first = a[0];
+    let second = a[1];
+}
+```
+
+---
+
+### Invalid Array Element Access
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+    let index = 10;
+    let element = a[index];
+    println!("The value of element is: {}", element);
+}
+```
+
+```
+$ cargo run
+   Compiling arrays v0.1.0 (file:///projects/arrays)
+     Running `target/debug/arrays`
+thread '<main>' panicked at 'index out of bounds: the len is 5 but the index is
+ 10', src/main.rs:6
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+```
 
 ---
 
